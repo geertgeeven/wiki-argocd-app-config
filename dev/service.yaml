@@ -6,6 +6,6 @@ spec:
   selector:
     app: klgn-bioit-wiki
   ports:
-  - port: 8080
+  - port: 8000
     protocol: TCP
     targetPort: 80
