@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bioit-wiki
+spec:
+  selector:
+    matchLabels:
+      app: klgn-bioit-wiki
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: klgn-bioit-wiki
+    spec:
+      containers:
+      - name: klgn-bioit-wiki
+        image: nanajanashia/argocd-app:1.2
+        ports:
+        - containerPort: 8080
